@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南梁学长不会爱上机电学弟</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <!-- 背景层 -->
+    <div id="background"></div>
+    
+    <!-- 角色层 -->
+    <div id="character">
+      <img id="character-sprite" src="" alt="">
+    </div>
+    
+    <!-- 功能按钮 -->
+    <div class="function-bar hidden" id="function-bar">
+      <button class="func-btn" id="save-btn" title="存档">💾</button>
+      <button class="func-btn" id="load-btn" title="读档">📂</button>
+      <button class="func-btn" id="music-btn" title="音乐">🎵</button>
+      <button class="func-btn" id="fullscreen-btn" title="全屏">⛶</button>
+    </div>
+    
+    <!-- 对话框层 -->
+    <div id="dialogue-box" class="hidden">
+      <div id="speaker-name"></div>
+      <div id="dialogue-text"></div>
+      <div id="choices-container"></div>
+    </div>
+    
+    <!-- 开始界面 -->
+    <div id="start-screen">
+      <h1>南梁学长不会爱上机电学弟</h1>
+
+      <button id="start-btn">开始游戏</button>
+      <p class="hint">按 Space 或 Enter 继续对话</p>
+    </div>
+    
+    <!-- 存档/读档界面 -->
+    <div id="save-load-screen">
+      <h2 id="save-load-title">存档</h2>
+      <div class="save-slots" id="save-slots">
+        <!-- 动态生成存档位 -->
+      </div>
+      <button id="save-load-close">关闭</button>
+    </div>
+    
+    <!-- 樱花容器 -->
+    <div id="sakura-container"></div>
+  </div>
+
+  <!-- 音频元素 -->
+  <audio id="bgm" loop>
+    <source src="assets/bgm.mp3" type="audio/mpeg">
+  </audio>
+  
+  <script src="game.js"></script>
+</body>
+</html>
